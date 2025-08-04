@@ -25,7 +25,6 @@ int main(void) {
     pos++;
   }
 
-  // printf("%d\n", floor);
   fclose(f);
   return 0;
 }

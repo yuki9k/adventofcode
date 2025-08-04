@@ -23,13 +23,14 @@ int main(void) {
       i++;
     }
 
-    int l = dimensions[0];
-    int w = dimensions[1];
-    int h = dimensions[2];
-
-    total += 2 * l * w + 2 * w * h + 2 * h * l;
     qsort(dimensions, 3, sizeof(int), compareInt);
-    total += dimensions[0] * dimensions[1];
+    int n = dimensions[0];
+    int m = dimensions[1];
+    int k = dimensions[2];
+
+    int wrap = 2 * (n + m);
+    int bow = n * m * k;
+    total += wrap + bow;
   }
 
   printf("%d\n", total);
